@@ -19,8 +19,9 @@ class Worker extends BaseWorker implements IEat, ISick {
 }
 
 class SuperWorker extends BaseWorker implements IEat, ISick{
-	public void work() {
+	public String work() {
 		// ....working much more
+		return ("I'm working");
 	}
 	public void eat()
 	{
@@ -35,8 +36,9 @@ class SuperWorker extends BaseWorker implements IEat, ISick{
 }
 
 class TempWorker extends BaseWorker implements IEat, ISick {
-	public void work() {
+	public String work() {
 	System.out.format("Welcome to Earth.\n");
+	return("Welcome to Earth.\n");
 	}
 
 	public void eat()
@@ -46,7 +48,7 @@ class TempWorker extends BaseWorker implements IEat, ISick {
 
 	public void sick()
 	{
-		System.out.format("Welcome to Earth.\n"); 
+		System.out.format("Welcome to Earth.\n");
 	}
 
 }

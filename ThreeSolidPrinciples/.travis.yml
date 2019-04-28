@@ -3,8 +3,8 @@ dist: xenial
 language: java
 script: 
   - gradle clean build
-  - tar -zcf hello_world_test_reports.tar.gz build/reports
-  - tar -zcf hello_world_executable_distributions.tar.gz build/distributions
+  - tar -zcf TSP_test_reports.tar.gz build/reports
+  - tar -zcf TSP_executable_distributions.tar.gz build/distributions
   - ls -R
 
 before_deploy:
@@ -14,18 +14,17 @@ before_deploy:
   - echo "Just generated GIT_TAG"
   - echo $GIT_TAG
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push -q https://$GITPERM@github.com/cs3398-vulcans-ponfarr/ThreeSolidPrinciples/ThreeSolidPrinciples  --tags
+  - git push -q https://$GITPERM@github.com/drlehr/ThreeSolidPrinciples  --tags
   - ls -R
   
 deploy:
   provider: releases
-  file_glob: true
   api_key:
     secure: $GITPERM
   file: 
     - README.md
-    - hello_world_test_reports.tar.gz 
-    - hello_world_executable_distributions.tar.gz 
+    - TSP_test_reports.tar.gz 
+    - TSP_executable_distributions.tar.gz 
   skip_cleanup: true
   on:
     tags: false
