@@ -23,4 +23,12 @@ public class TestWorker {
 	{
 		assertEquals(w.work(), "Work work work, do work \n","Mismatch between test text and method text");
 	}
+	
+	@Test
+	@DisplayName("newtestjkWorkerPass()")
+	public void newtestjkWorkerPass()
+	{
+		private Worker testW = new Worker();
+		assertEquals(w, testW);
+	}
 }
