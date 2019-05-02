@@ -12,7 +12,7 @@ public class TestWorker {
 
 	@Test
 	@DisplayName("Work Method Fail Test")
-	public void newtestjkWorkerFail()
+	public void testWorkMethodFail()
 	{
 		assertEquals(w.work(), "I'm already working!","Mismatch between test text and method text");
 	}	
