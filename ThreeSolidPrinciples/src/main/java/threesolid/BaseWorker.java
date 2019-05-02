@@ -10,8 +10,9 @@ import java.io.*;
  */
 public class BaseWorker
 {
-    public void work()
+    public String work()
     {
         System.out.format("Work work work, do work \n");
+        return ("Work work work, do work \n");
     }
 }
