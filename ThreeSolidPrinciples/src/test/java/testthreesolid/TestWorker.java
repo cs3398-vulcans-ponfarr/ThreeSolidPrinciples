@@ -23,4 +23,18 @@ public class TestWorker {
 	{
 		assertEquals(w.work(), "Work work work, do work \n","Mismatch between test text and method text");
 	}
+	
+	@Test
+	@DisplayName("newtestjkWorkerPass")
+	public void newtestjkWorkerPass()
+	{
+		assertTrue(w instanceof Worker, "'w' was not created as an instance of Worker.");
+	}
+	
+	@Test
+	@DisplayName("newtestjkWorkerFail")
+	public void newtestjkWorkerFail()
+	{
+		assertFalse(w instanceof Worker, "'w' was not created as an instance of Worker.");
+	}
 }
