@@ -11,16 +11,11 @@ public class TestWorker {
 	private Worker w = new Worker();
 
 	@Test
-	@DisplayName("Work Method Fail Test")
-	public void testWorkMethodFail()
+	@DisplayName("Work Method Fail: Object is supposed to be nullWW")
+	public void newtestCVWorkerPass()
 	{
-		assertEquals(w.work(), "I'm already working!","Mismatch between test text and method text");
+		 	assertNull(w.work(), "The object is null.");
 	}
 
-	@Test
-	@DisplayName("Work Method Succeed Test")
-	public void testWorkMethodSucceed()
-	{
-		assertEquals(w.work(), "Work work work, do work \n","Mismatch between test text and method text");
-	}
+
 }
