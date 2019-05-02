@@ -12,23 +12,15 @@ public class TestWorker {
 
 	@Test
 	@DisplayName("Work Method Fail Test")
-	public void testWorkMethodFail()
+	public void newtestjkWorkerFail()
 	{
 		assertEquals(w.work(), "I'm already working!","Mismatch between test text and method text");
-	}
+	}	
 
 	@Test
 	@DisplayName("Work Method Succeed Test")
 	public void testWorkMethodSucceed()
 	{
 		assertEquals(w.work(), "Work work work, do work \n","Mismatch between test text and method text");
-	}
-	
-	@Test
-	@DisplayName("newtestjkWorkerPass()")
-	public void newtestjkWorkerPass()
-	{
-		private Worker testW = new Worker();
-		assertEquals(w, testW);
 	}
 }
